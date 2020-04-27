@@ -14,6 +14,7 @@
 		EAB77A5324563D1C00904ECD /* TravelBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB77A5124563D1C00904ECD /* TravelBook.xcdatamodeld */; };
 		EAB77A5524563D2000904ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB77A5424563D2000904ECD /* Assets.xcassets */; };
 		EAB77A5824563D2000904ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAB77A5624563D2000904ECD /* LaunchScreen.storyboard */; };
+		EAB77A60245670E100904ECD /* listViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB77A5F245670E100904ECD /* listViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EAB77A5424563D2000904ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAB77A5724563D2000904ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EAB77A5924563D2000904ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAB77A5F245670E100904ECD /* listViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				EAB77A5624563D2000904ECD /* LaunchScreen.storyboard */,
 				EAB77A5924563D2000904ECD /* Info.plist */,
 				EAB77A5124563D1C00904ECD /* TravelBook.xcdatamodeld */,
+				EAB77A5F245670E100904ECD /* listViewController.swift */,
 			);
 			path = TravelBook;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAB77A5324563D1C00904ECD /* TravelBook.xcdatamodeld in Sources */,
+				EAB77A60245670E100904ECD /* listViewController.swift in Sources */,
 				EAB77A4D24563D1C00904ECD /* ViewController.swift in Sources */,
 				EAB77A4924563D1C00904ECD /* AppDelegate.swift in Sources */,
 				EAB77A4B24563D1C00904ECD /* SceneDelegate.swift in Sources */,
