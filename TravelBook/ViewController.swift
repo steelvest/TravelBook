@@ -21,7 +21,14 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     var chosenLatitude = Double()
     var chosenLongitude = Double()
     
+    var selectedTitle = ""
+    var selectedTitleId : UUID?
     
+    
+    var annotationTitle = ""
+    var annotationSubTitle = ""
+    var annotationLatitude  : Double
+    var annotationlongtude : Double
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -42,6 +49,43 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         //view.addGestureRecognizer(klavyeKapat)
         
         view.addGestureRecognizer(tap)
+        
+        if selectedTitle != "" {
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let stringUUID = selectedTitleId!.uuidString
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Places")
+            fetchRequest.predicate = NSPredicate(format: "id %@", stringUUID)
+            
+            do {
+                 let results = try context.fetch(fetchRequest)
+                
+                if results.count > 0 {
+                    for result in results as! [NSManagedObject] {
+                        if let title =  result.value(forKey: "title") as? String {
+                            annotationTitle = title
+                        }
+                        if let subtitle =  result.value(forKey: "subtitle") as? String {
+                            annotationSubTitle = subtitle
+                        }
+                        if let latitude =  result.value(forKey: "latitude") as? Double {
+                            annotationLatitude = latitude
+                        }
+                        if let longtude =  result.value(forKey: "longtude") as? Double {
+                            annotationlongtude = longtude
+                        }
+                        
+                    }
+                }
+            } catch {
+                print("Hata Var ")
+            }
+           
+            
+        }else {
+            
+        }
     }
     
     @objc func hideKeyboard() {
